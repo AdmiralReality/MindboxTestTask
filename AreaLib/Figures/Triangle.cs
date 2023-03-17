@@ -31,5 +31,12 @@ namespace AreaLib.Figures
             b = @params[1];
             c = @params[2];
         }
+
+        public void IsRight()
+        {
+            var sides = (new double[] { a, b, c }).OrderByDescending(x => x).ToList();
+
+            return sides[0] * sides[0] == sides[1] * sides[1] + sides[2] * sides[2];
+        }
     }
 }
