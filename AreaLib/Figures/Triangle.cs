@@ -32,7 +32,7 @@ namespace AreaLib.Figures
             c = @params[2];
         }
 
-        public void IsRight()
+        public bool IsRight()
         {
             var sides = (new double[] { a, b, c }).OrderByDescending(x => x).ToList();
 
